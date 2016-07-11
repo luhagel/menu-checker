@@ -14,6 +14,36 @@
           }
         } 
       }
+    },
+    {
+      "restaurant_name": "Starbucks",
+      "source_link": "https://subway.com/us/ingredients",
+      "menu": {
+      "Bread": {
+        "Italian": {
+          "display_name": "Italian Bread",
+          "allergens": [
+            "wheat"
+          ],
+          "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+          }
+        } 
+      }
+    },
+    {
+      "restaurant_name": "Burger King",
+      "source_link": "https://subway.com/us/ingredients",
+      "menu": {
+      "Bread": {
+        "Italian": {
+          "display_name": "Italian Bread",
+          "allergens": [
+            "wheat"
+          ],
+          "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+          }
+        } 
+      }
     }
   ]
 }

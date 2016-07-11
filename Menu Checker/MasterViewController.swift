@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [AnyObject]()
+    var restaurantData: JSON? = nil
 
 
     override func viewDidLoad() {
@@ -25,6 +27,7 @@ class MasterViewController: UITableViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+        restaurantData = JSONHelper.pullData()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -59,14 +62,14 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
+        let restaurantCount = restaurantData!["restaurants"].arrayValue.count
+        return restaurantCount
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        let object = objects[indexPath.row] as! NSDate
-        cell.textLabel!.text = object.description
+        cell.textLabel!.text = restaurantData!["restaurants"][indexPath.row]["restaurant_name"].stringValue
         return cell
     }
 

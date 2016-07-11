@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8116F5E81D34620F003E4FC2 /* subway.json in Resources */ = {isa = PBXBuildFile; fileRef = 8116F5E71D34620F003E4FC2 /* subway.json */; };
+		8116F5EA1D34650D003E4FC2 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 8116F5E91D34650D003E4FC2 /* data.json */; };
+		8116F5F01D3465A9003E4FC2 /* JSONHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8116F5EF1D3465A9003E4FC2 /* JSONHelper.swift */; };
 		8130DBA91D340B7300B56260 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130DBA81D340B7300B56260 /* AppDelegate.swift */; };
 		8130DBAB1D340B7300B56260 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130DBAA1D340B7300B56260 /* MasterViewController.swift */; };
 		8130DBAD1D340B7300B56260 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8130DBAC1D340B7300B56260 /* DetailViewController.swift */; };
@@ -20,15 +21,16 @@
 /* Begin PBXFileReference section */
 		38FF0254FA3C9CCEDD69CFB2 /* Pods-Menu Checker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu Checker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Menu Checker/Pods-Menu Checker.debug.xcconfig"; sourceTree = "<group>"; };
 		5582611488B19295C0CA678D /* Pods-Menu Checker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu Checker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Menu Checker/Pods-Menu Checker.release.xcconfig"; sourceTree = "<group>"; };
-		8116F5E71D34620F003E4FC2 /* subway.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = subway.json; sourceTree = "<group>"; };
+		8116F5E91D34650D003E4FC2 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		8116F5EF1D3465A9003E4FC2 /* JSONHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONHelper.swift; sourceTree = "<group>"; };
 		8130DBA51D340B7300B56260 /* Menu Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8130DBA81D340B7300B56260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8130DBAA1D340B7300B56260 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		8130DBAC1D340B7300B56260 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8130DBA81D340B7300B56260 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
+		8130DBAA1D340B7300B56260 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MasterViewController.swift; path = ../MasterViewController.swift; sourceTree = "<group>"; };
+		8130DBAC1D340B7300B56260 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = ../DetailViewController.swift; sourceTree = "<group>"; };
 		8130DBAF1D340B7300B56260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8130DBB11D340B7300B56260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8130DBB41D340B7300B56260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8130DBB61D340B7300B56260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8130DBB61D340B7300B56260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		B6C89936FDB83108164ACE4B /* Pods_Menu_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menu_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -55,9 +57,42 @@
 		8116F5E61D34620F003E4FC2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8116F5E71D34620F003E4FC2 /* subway.json */,
+				8116F5E91D34650D003E4FC2 /* data.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		8116F5EB1D346582003E4FC2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8130DBAA1D340B7300B56260 /* MasterViewController.swift */,
+				8130DBAC1D340B7300B56260 /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8116F5EC1D346582003E4FC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8116F5ED1D346582003E4FC2 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8130DBB61D340B7300B56260 /* Info.plist */,
+				8130DBA81D340B7300B56260 /* AppDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		8116F5EE1D346582003E4FC2 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				8116F5EF1D3465A9003E4FC2 /* JSONHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8130DB9C1D340B7300B56260 = {
@@ -81,14 +116,14 @@
 		8130DBA71D340B7300B56260 /* Menu Checker */ = {
 			isa = PBXGroup;
 			children = (
+				8116F5EB1D346582003E4FC2 /* ViewController */,
+				8116F5EC1D346582003E4FC2 /* View */,
+				8116F5ED1D346582003E4FC2 /* SupportFiles */,
+				8116F5EE1D346582003E4FC2 /* Helper */,
 				8116F5E61D34620F003E4FC2 /* Data */,
-				8130DBA81D340B7300B56260 /* AppDelegate.swift */,
-				8130DBAA1D340B7300B56260 /* MasterViewController.swift */,
-				8130DBAC1D340B7300B56260 /* DetailViewController.swift */,
 				8130DBAE1D340B7300B56260 /* Main.storyboard */,
 				8130DBB11D340B7300B56260 /* Assets.xcassets */,
 				8130DBB31D340B7300B56260 /* LaunchScreen.storyboard */,
-				8130DBB61D340B7300B56260 /* Info.plist */,
 			);
 			path = "Menu Checker";
 			sourceTree = "<group>";
@@ -165,8 +200,8 @@
 			files = (
 				8130DBB51D340B7300B56260 /* LaunchScreen.storyboard in Resources */,
 				8130DBB21D340B7300B56260 /* Assets.xcassets in Resources */,
-				8116F5E81D34620F003E4FC2 /* subway.json in Resources */,
 				8130DBB01D340B7300B56260 /* Main.storyboard in Resources */,
+				8116F5EA1D34650D003E4FC2 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8130DBAD1D340B7300B56260 /* DetailViewController.swift in Sources */,
+				8116F5F01D3465A9003E4FC2 /* JSONHelper.swift in Sources */,
 				8130DBAB1D340B7300B56260 /* MasterViewController.swift in Sources */,
 				8130DBA91D340B7300B56260 /* AppDelegate.swift in Sources */,
 			);
