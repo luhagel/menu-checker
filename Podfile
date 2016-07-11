@@ -6,5 +6,5 @@ target 'Menu Checker' do
   use_frameworks!
 
   # Pods for Menu Checker
-
+  pod 'SwiftyJSON'
 end
