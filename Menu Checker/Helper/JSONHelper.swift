@@ -14,7 +14,6 @@ class JSONHelper {
         let path = NSBundle.mainBundle().pathForResource("data", ofType: "json")
         let jsonData = NSData(contentsOfFile:path!)
         let json = JSON(data: jsonData!)
-        print(json)
         
         return json
     }
