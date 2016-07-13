@@ -13,20 +13,22 @@ class MenuTableViewController: UITableViewController {
     @IBOutlet var menuTableView: UITableView!
     
     var restaurant: JSON? = nil
+    var menu: JSON!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
+        menu = restaurant!["menu"]
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return self.menu.arrayValue.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurant!["menu"][0]["products"].arrayValue.count
+        return self.menu[section]["products"].arrayValue.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -36,6 +38,10 @@ class MenuTableViewController: UITableViewController {
         cell.productNameLabel.text = productName
         return cell
     }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.menu[section]["category_name"].stringValue
+    }
 
     // MARK: - Navigation
 
@@ -43,7 +49,7 @@ class MenuTableViewController: UITableViewController {
         if segue.identifier == "ShowProduct" {
             let destination = segue.destinationViewController as! MenuItemViewController
             if let indexPath = menuTableView.indexPathForSelectedRow {
-                destination.productInfo = restaurant!["menu"][0]["products"][indexPath.row]
+                destination.productInfo = self.menu[indexPath.section]["products"][indexPath.row]
             }
         }
     }

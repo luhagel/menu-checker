@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
+import AlamofireImage
 
 class RestaurantTableViewController: UITableViewController {
     @IBOutlet var restaurantTableView: UITableView!
@@ -34,6 +36,9 @@ class RestaurantTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RestaurantCell", forIndexPath: indexPath) as! RestaurantTableViewCell
+        
+        let imageURL = NSURL(string: restaurantData["restaurants"][indexPath.row]["img"].stringValue)!
+        cell.restaurantImageView.af_setImageWithURL(imageURL)
         
         let restaurantName = restaurantData["restaurants"][indexPath.row]["restaurant_name"].stringValue
         cell.restaurantNameLabel.text = restaurantName

@@ -10,33 +10,43 @@
         <scene sceneID="qR9-1N-ooh">
             <objects>
                 <tableViewController id="dSx-Zd-K3T" userLabel="Restaurant View Controller" customClass="RestaurantTableViewController" customModule="Menu_Checker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="yti-Yb-rBu">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" id="yti-Yb-rBu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" id="9nx-gx-f7p" customClass="RestaurantTableViewCell" customModule="Menu_Checker" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RestaurantCell" rowHeight="350" id="9nx-gx-f7p" customClass="RestaurantTableViewCell" customModule="Menu_Checker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9nx-gx-f7p" id="vf1-5X-YUP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-q7-I02">
+                                            <rect key="frame" x="8" y="44" width="584" height="298"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38e-HZ-Ax2">
                                             <rect key="frame" x="8" y="8" width="584" height="28"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="28" id="aAf-bj-kEH"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="leading" secondItem="vf1-5X-YUP" secondAttribute="leadingMargin" id="98n-Id-2gm"/>
-                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="top" secondItem="vf1-5X-YUP" secondAttribute="topMargin" id="Bsr-D8-Vo3"/>
-                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="centerY" secondItem="vf1-5X-YUP" secondAttribute="centerY" id="W9f-9Z-Wbv"/>
-                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="trailing" secondItem="vf1-5X-YUP" secondAttribute="trailingMargin" id="qwk-yr-tGs"/>
+                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="leading" secondItem="SZh-q7-I02" secondAttribute="leading" id="1cA-JM-bI1"/>
+                                        <constraint firstItem="SZh-q7-I02" firstAttribute="top" secondItem="38e-HZ-Ax2" secondAttribute="bottom" constant="8" symbolic="YES" id="4Us-jC-OEL"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SZh-q7-I02" secondAttribute="bottom" constant="-0.5" id="Ggi-rK-oBR"/>
+                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="leading" secondItem="vf1-5X-YUP" secondAttribute="leadingMargin" id="HNm-Q7-Uhg"/>
+                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="trailing" secondItem="SZh-q7-I02" secondAttribute="trailing" id="SeH-Fz-5NI"/>
+                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="top" secondItem="vf1-5X-YUP" secondAttribute="topMargin" id="clC-kS-l9e"/>
+                                        <constraint firstItem="38e-HZ-Ax2" firstAttribute="trailing" secondItem="vf1-5X-YUP" secondAttribute="trailingMargin" id="pnw-kZ-3Hf"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="restaurantImageView" destination="SZh-q7-I02" id="swq-y1-gc3"/>
                                     <outlet property="restaurantNameLabel" destination="38e-HZ-Ax2" id="ebL-mB-04T"/>
                                     <segue destination="JXV-w0-4n5" kind="show" identifier="ShowMenu" id="YUf-4M-IWu"/>
                                 </connections>
@@ -154,6 +164,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KGt-Ti-5y9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.017001612557600382" green="0.35911458333333335" blue="0.051657691386990397" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="dSx-Zd-K3T" kind="relationship" relationship="rootViewController" id="IOq-Xs-QGq"/>

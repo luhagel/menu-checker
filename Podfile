@@ -7,4 +7,6 @@ target 'Menu Checker' do
 
   # Pods for Menu Checker
   pod 'SwiftyJSON'
+  pod 'Alamofire'
+  pod 'AlamofireImage'
 end

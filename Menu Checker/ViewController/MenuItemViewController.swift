@@ -17,8 +17,10 @@ class MenuItemViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //allergensLabel.text = productInfo!["allergens"].arrayValue
+        title = productInfo!["display_name"].stringValue
+        
+        let allergensArray = String(productInfo!["allergens"].arrayValue)
+        allergensLabel.text = allergensArray
         ingredientsTextView.text = productInfo!["ingredients"].stringValue
     }
 }
