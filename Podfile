@@ -9,4 +9,6 @@ target 'Menu Checker' do
   pod 'SwiftyJSON'
   pod 'Alamofire'
   pod 'AlamofireImage'
+  pod 'Fabric'
+  pod 'Answers'
 end

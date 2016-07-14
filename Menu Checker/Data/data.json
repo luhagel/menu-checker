@@ -37,14 +37,17 @@
           {
             "display_name": "Ranch",
             "allergens": [
-              "wheat"
+              "dairy",
+              "stuff"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           },
           {
             "display_name": "mayo",
             "allergens": [
-              "wheat"
+              "wheat",
+              "dairy",
+              "egg"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           },

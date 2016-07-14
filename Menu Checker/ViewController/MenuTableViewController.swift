@@ -14,6 +14,11 @@ class MenuTableViewController: UITableViewController {
     
     var restaurant: JSON? = nil
     var menu: JSON!
+    var filteredMenu: [JSON] = []
+    
+    @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
+        self.filterMenu()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +33,24 @@ class MenuTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.menu[section]["products"].arrayValue.count
+        if filteredMenu.count == 0 {
+            return self.menu[section]["products"].arrayValue.count
+        } else {
+            return filteredMenu[section]["products"].arrayValue.count
+        }
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
+        
+        var listToDisplay: [JSON]
+        if filteredMenu.count == 0 {
+            listToDisplay = self.menu.arrayValue
+        } else {
+            listToDisplay = self.filteredMenu
+        }
 
-        let productName = restaurant!["menu"][indexPath.section]["products"][indexPath.row]["display_name"].stringValue
+        let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue
         cell.productNameLabel.text = productName
         return cell
     }
@@ -52,5 +68,41 @@ class MenuTableViewController: UITableViewController {
                 destination.productInfo = self.menu[indexPath.section]["products"][indexPath.row]
             }
         }
+    }
+    
+    //MARK: Methods
+    func filterMenu() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
+        print(userPrefs)
+        var jsonString: String = ""
+        var categoriesJsonString: String = ""
+        for category in self.menu.arrayValue {
+            if !categoriesJsonString.isEmpty {
+               categoriesJsonString += ","
+            }
+            let categoryName = category["category_name"].stringValue
+            let productsArray = category["products"].arrayValue
+            let filteredProductsArray = productsArray.filter({!isAllergic($0["allergens"].arrayValue, userPrefs: userPrefs)})
+            categoriesJsonString += "{\"category_name\": \"\(categoryName)\", \"products\": \(filteredProductsArray)}"
+        }
+        
+        jsonString = "{\"menu\":[\(categoriesJsonString)]}"
+        
+        let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let jsonObject = JSON(data: data!)
+        filteredMenu = jsonObject["menu"].arrayValue
+        menuTableView.reloadData()
+    }
+    
+    func isAllergic(allergens: [JSON], userPrefs: [String]) -> Bool {
+        for allergen in allergens {
+            for pref in userPrefs {
+                if pref == allergen.stringValue {
+                    return true
+                }
+            }
+        }
+        return false
     }
 }

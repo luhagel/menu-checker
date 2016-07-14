@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="350"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9nx-gx-f7p" id="vf1-5X-YUP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="350"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="349.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SZh-q7-I02">
@@ -135,6 +135,13 @@
                             <outlet property="delegate" destination="JXV-w0-4n5" id="Xhu-9B-A48"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="pPV-3Q-cAJ">
+                        <barButtonItem key="rightBarButtonItem" title="Filter!" id="e2s-co-KpO">
+                            <connections>
+                                <action selector="filterButtonTapped:" destination="JXV-w0-4n5" id="gHb-bV-pFz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="menuTableView" destination="WmC-xp-Szc" id="6Nw-py-sCO"/>
                     </connections>

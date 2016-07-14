@@ -2,18 +2,25 @@ PODS:
   - Alamofire (3.4.1)
   - AlamofireImage (2.4.0):
     - Alamofire (~> 3.3)
+  - Answers (1.2.1):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Answers
+  - Fabric
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
+  Answers: 57ee6bcc9bd3c6710862065c9251365a2a404920
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 20e5643a3824599fb247de5de956418effd37ce9
+PODFILE CHECKSUM: aafb8524d4787e891342a478130f4301f6183d80
 
 COCOAPODS: 1.0.1
