@@ -17,9 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Answers.self])
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let stdPrefs = ["dairy"]
-        defaults.setObject(stdPrefs, forKey: "UserPrefs")
         return true
     }
 

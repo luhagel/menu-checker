@@ -18,6 +18,8 @@
 		81C7F7A61D35F78800973B2B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */; };
 		81C7F7A81D35F7A600973B2B /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A71D35F7A600973B2B /* RestaurantTableViewController.swift */; };
 		81C7F7AA1D35F7BE00973B2B /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A91D35F7BE00973B2B /* RestaurantTableViewCell.swift */; };
+		81D2A07C1D3D420A00B7441C /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2A07B1D3D420A00B7441C /* SettingsTableViewController.swift */; };
+		81D2A07E1D3D49CD00B7441C /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2A07D1D3D49CD00B7441C /* SettingTableViewCell.swift */; };
 		C3FA6D09454FFFBECD27B243 /* Pods_Menu_Checker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6C89936FDB83108164ACE4B /* Pods_Menu_Checker.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		81C7F7A71D35F7A600973B2B /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		81C7F7A91D35F7BE00973B2B /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		81D2A07B1D3D420A00B7441C /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		81D2A07D1D3D49CD00B7441C /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		B6C89936FDB83108164ACE4B /* Pods_Menu_Checker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Menu_Checker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +78,7 @@
 				81C7F7A11D35E99A00973B2B /* MenuItemViewController.swift */,
 				81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */,
 				81C7F7A71D35F7A600973B2B /* RestaurantTableViewController.swift */,
+				81D2A07B1D3D420A00B7441C /* SettingsTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 			children = (
 				81C7F7A31D35F58200973B2B /* MenuTableViewCell.swift */,
 				81C7F7A91D35F7BE00973B2B /* RestaurantTableViewCell.swift */,
+				81D2A07D1D3D49CD00B7441C /* SettingTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,7 +292,9 @@
 				81C7F7A41D35F58200973B2B /* MenuTableViewCell.swift in Sources */,
 				81C7F7A61D35F78800973B2B /* MenuTableViewController.swift in Sources */,
 				8116F5F01D3465A9003E4FC2 /* JSONHelper.swift in Sources */,
+				81D2A07E1D3D49CD00B7441C /* SettingTableViewCell.swift in Sources */,
 				81C7F7A21D35E99A00973B2B /* MenuItemViewController.swift in Sources */,
+				81D2A07C1D3D420A00B7441C /* SettingsTableViewController.swift in Sources */,
 				81C7F7A81D35F7A600973B2B /* RestaurantTableViewController.swift in Sources */,
 				81C7F7AA1D35F7BE00973B2B /* RestaurantTableViewCell.swift in Sources */,
 				8130DBA91D340B7300B56260 /* AppDelegate.swift in Sources */,
