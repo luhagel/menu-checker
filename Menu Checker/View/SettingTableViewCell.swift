@@ -9,17 +9,21 @@
 import UIKit
 
 protocol SettingTableViewCellDelegate {
-    func settingSwitched(sender: SettingTableViewCell)
+    func toggleOn(sender: SettingTableViewCell)
+    func toggleOff(sender: SettingTableViewCell)
 }
 
 class SettingTableViewCell: UITableViewCell {
-    var delegate:SettingTableViewCellDelegate?
+    var delegate: SettingTableViewCellDelegate?
     
     @IBOutlet weak var seetingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
     
     @IBAction func settingSwitched(sender: AnyObject) {
-        print("switched")
-        delegate?.settingSwitched(self)
+        if self.settingSwitch.on {
+            delegate?.toggleOn(self)
+        } else {
+            delegate?.toggleOff(self)
+        }
     }
 }

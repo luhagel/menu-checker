@@ -27,17 +27,7 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Settings"
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        userPrefs = defaults.arrayForKey("UserPrefs") as! [String]
     }
 
     // MARK: - Table view data source
@@ -54,71 +44,43 @@ class SettingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Setting", forIndexPath: indexPath) as! SettingTableViewCell
 
         cell.seetingNameLabel.text = allergens[indexPath.row]
+        if isActive(allergens[indexPath.row]) {
+            cell.settingSwitch.on = true
+        }
+        cell.delegate = self
 
         return cell
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    func isActive(allergen: String) -> Bool {
+        for item in userPrefs {
+            if item == allergen {
+                return true
+            }
+        }
+        return false
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(animated : Bool) {
+        super.viewWillDisappear(animated)
+        if (self.isMovingFromParentViewController()){
+            defaults.setObject(userPrefs, forKey: "UserPrefs")
+        }
     }
-    */
-
 }
 
-extension SettingsTableViewController: SettingTableViewCellDelegate {
-    func settingSwitched(sender: SettingTableViewCell) {
-        print("delegate func called")
-        if sender.settingSwitch.on {
-            for allergen in userPrefs {
-                if allergen == sender.seetingNameLabel.text {
-                    return
-                } else {
-                    userPrefs.append(sender.seetingNameLabel.text!)
-                }
+extension SettingsTableViewController : SettingTableViewCellDelegate {
+    func toggleOn(sender: SettingTableViewCell) {
+        userPrefs += [sender.seetingNameLabel.text!]
+        userPrefs = Array(Set(userPrefs))
+        print(userPrefs)
+    }
+    func toggleOff(sender: SettingTableViewCell) {
+        for (index, allergen) in userPrefs.enumerate() {
+            if allergen == sender.seetingNameLabel.text! {
+                userPrefs.removeAtIndex(index)
             }
-            print(userPrefs)
-        } else {
-            
         }
     }
 }

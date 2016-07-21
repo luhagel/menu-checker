@@ -11,38 +11,38 @@
             {
               "display_name": "Italian Bread",
               "allergens": [
-                "wheat"
+                "Wheat"
               ],
               "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
             },
             {
               "display_name": "9-Grain Wheat",
               "allergens": [
-                "wheat"
+                "Wheat"
               ],
               "ingredients": "Whole wheat flour, enriched flour (wheat flour, niacin, iron, thiamine mononitrate, riboflavin, folic acid), yeast, sugar, wheat gluten, contains 2% or less of: calcium carbonate, soybean oil, salt, wheat, rye, yellow corn, oats, triticale, brown rice, barley, flax seed, millet, sorghum, refinery syrup, vitamin D2, sunflower lecithin, natural flavor, honey, ascorbic acid, yeast extract, enzymes."
             },
             {
               "display_name": "Flatbread, White",
               "allergens": [
-                "wheat",
-                "milk"
+                "Wheat",
+                "Milk"
               ],
               "ingredients": "Enriched unbleached wheat flour (wheat flour, malted barley flour, ascorbic acid added as a dough conditioner, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, yeast, soybean oil, contains less than 2% of the following: nonfat dry milk, wheat gluten, salt, sugar, calcium carbonate, distilled vinegar, dough conditioner (enzymes, oat fiber, ascorbic acid, calcium sulfate, salt), cultured wheat flour, baking powder (sodium acid pyrophosphate, baking soda, monocalcium phosphate), flavor (sea salt, sugar, yeast extract), vitamind2."
             },
             {
               "display_name": "Flatbread, Multigrain",
               "allergens": [
-                "wheat",
-                "milk"
+                "Wheat",
+                "Milk"
               ],
               "ingredients": "Whole wheat flour, water, yeast, soybean oil, sugar, contains less than 2% of the following: whole wheat flakes, oats, nonfat dry milk, wheat gluten, salt, calcium carbonate, distilled vinegar, chia seeds, amaranth seeds, cultured wheat flour, whole grain barley, corn, flaxseed, whole rye, whole grain triticale, wheat germ, leavening (sodium acid pyrophosphate, baking soda, monocalcium phosphate), enzyme, oat fiber, sea salt, yeast extract, vitamin D2, ascorbic acid, calcium sulfate."
             },
             {
               "display_name": "Italian Herbs & Cheese Bread",
               "allergens": [
-                "wheat",
-                "milk"
+                "Wheat",
+                "Milk"
               ],
               "ingredients": "Subway® Italian Bread, Monterey Jack cheese blend [(Monterey Jack cheese (cultured pasteurized milk, salt, enzymes), cheddar cheese (cultured pasteurized milk, salt, enzymes, annatto color), potato starch and powdered cellulose added to prevent caking, natamycin (a natural mold inhibitor)], corn maltodextrin, ground rice, toasted bread crumbs (enriched wheat flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), sugar, sea salt, yeast), salt, spices (including oregano), dehydrated garlic, parmesan cheese (part skim milk, cheese cultures, salt, enzymes), modified corn starch, sunflower oil, citric acid, yeast extract, lactic acid, natural flavor, and not more than 2% silicon dioxide added (as anticaking agent)."
             }
@@ -54,24 +54,23 @@
           {
             "display_name": "Ranch",
             "allergens": [
-              "dairy",
-              "stuff"
+              "Milk"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           },
           {
             "display_name": "mayo",
             "allergens": [
-              "wheat",
-              "dairy",
-              "egg"
+              "Wheat",
+              "Milk",
+              "Eggs"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           },
           {
             "display_name": "Honey Mustard",
             "allergens": [
-              "wheat"
+              "Wheat"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           }
