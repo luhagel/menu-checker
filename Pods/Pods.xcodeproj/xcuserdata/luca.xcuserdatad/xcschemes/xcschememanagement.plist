@@ -14,6 +14,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Material-io.cosmicmind.material.icons.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Material.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Menu Checker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,12 +42,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>04693735BCFA74B873DE04047ECC5FBA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>05094CC4A047119F7ADC14EE74C4881C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>58AE9AE8ECEB35A78E37622092AAF68D</key>
+		<key>08C670F14C5E0F92D52B4FD40051294F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B006392A6DC63E06AC81DE6F08803B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +67,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F1206C0190F07676A926A608D2308364</key>
+		<key>8BF081BE35AD5A41B3E5C858483888BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A677F2CFF4EAA289B448055A5584080F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

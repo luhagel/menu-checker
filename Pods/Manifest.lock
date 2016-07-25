@@ -5,6 +5,7 @@ PODS:
   - Answers (1.2.1):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
+  - Material (1.42.6)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - AlamofireImage
   - Answers
   - Fabric
+  - Material (~> 1.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -19,8 +21,9 @@ SPEC CHECKSUMS:
   AlamofireImage: 87408b652e0f5ae5fe364035f15aea8b9b24c77e
   Answers: 57ee6bcc9bd3c6710862065c9251365a2a404920
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  Material: 76dc9b14ad8b3a2ad673b77ad73dd66ed1eee68c
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: aafb8524d4787e891342a478130f4301f6183d80
+PODFILE CHECKSUM: 003d754397a4986f9a96a94d0f4cb93aee55f6f1
 
 COCOAPODS: 1.0.1
