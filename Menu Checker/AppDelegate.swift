@@ -17,6 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Fabric.with([Answers.self])
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if defaults.arrayForKey("UserPrefs") == nil {
+            defaults.setObject([String](), forKey: "UserPrefs")
+        }
+            
         return true
     }
 

@@ -28,13 +28,17 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-NB-X3k">
-                                            <rect key="frame" x="259" y="6" width="51" height="31"/>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-NB-X3k">
+                                            <rect key="frame" x="533" y="6" width="51" height="31"/>
                                             <connections>
                                                 <action selector="settingSwitched:" destination="wx1-s3-T6C" eventType="valueChanged" id="rxT-kG-Izt"/>
                                             </connections>
                                         </switch>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jAf-NB-X3k" secondAttribute="trailing" constant="10" id="2p6-6r-TSX"/>
+                                        <constraint firstItem="jAf-NB-X3k" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="ZBA-Yd-Y7O"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="seetingNameLabel" destination="heh-18-VlK" id="RoQ-bx-0fe"/>
@@ -184,32 +188,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Allergens:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-Cf-I7S">
-                                <rect key="frame" x="7" y="99" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergens:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFD-Cf-I7S">
+                                <rect key="frame" x="20" y="93" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMy-B2-lkb">
+                                <rect key="frame" x="20" y="204" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-7i-bYQ">
+                                <rect key="frame" x="20" y="141" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMy-B2-lkb">
-                                <rect key="frame" x="7" y="160" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLo-7i-bYQ">
-                                <rect key="frame" x="129" y="98" width="451" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-eY-PvD">
-                                <rect key="frame" x="129" y="160" width="407" height="232"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf8-eY-PvD">
+                                <rect key="frame" x="20" y="245" width="560" height="355"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aMy-B2-lkb" firstAttribute="leading" secondItem="XHw-S6-dID" secondAttribute="leadingMargin" id="0Ed-MQ-zEP"/>
+                            <constraint firstItem="aMy-B2-lkb" firstAttribute="top" secondItem="zFD-Cf-I7S" secondAttribute="bottom" constant="90" id="0bN-dq-1gt"/>
+                            <constraint firstItem="zFD-Cf-I7S" firstAttribute="leading" secondItem="XHw-S6-dID" secondAttribute="leadingMargin" id="4Lt-Le-eP5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cf8-eY-PvD" secondAttribute="trailing" id="7ns-vK-jxp"/>
+                            <constraint firstItem="zFD-Cf-I7S" firstAttribute="centerX" secondItem="XHw-S6-dID" secondAttribute="centerX" id="E14-Fn-2pl"/>
+                            <constraint firstItem="zFD-Cf-I7S" firstAttribute="top" secondItem="uM6-RZ-UOi" secondAttribute="bottom" constant="29" id="IHn-NY-zyB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aMy-B2-lkb" secondAttribute="trailing" id="T6k-xV-6qs"/>
+                            <constraint firstItem="XLo-7i-bYQ" firstAttribute="leading" secondItem="XHw-S6-dID" secondAttribute="leadingMargin" id="dCm-yX-8Ig"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zFD-Cf-I7S" secondAttribute="trailing" id="ele-Jz-7tw"/>
+                            <constraint firstItem="XLo-7i-bYQ" firstAttribute="top" secondItem="zFD-Cf-I7S" secondAttribute="bottom" constant="27" id="ewi-f0-pd0"/>
+                            <constraint firstItem="Cf8-eY-PvD" firstAttribute="centerY" secondItem="XHw-S6-dID" secondAttribute="centerY" id="jJC-On-biL"/>
+                            <constraint firstItem="V1O-d3-xfH" firstAttribute="top" secondItem="Cf8-eY-PvD" secondAttribute="bottom" id="kLE-fS-uoP"/>
+                            <constraint firstItem="Cf8-eY-PvD" firstAttribute="top" secondItem="aMy-B2-lkb" secondAttribute="bottom" constant="20" id="xvm-JH-I6y"/>
+                            <constraint firstItem="XLo-7i-bYQ" firstAttribute="trailing" secondItem="XHw-S6-dID" secondAttribute="trailingMargin" id="yMl-eQ-GTG"/>
+                            <constraint firstItem="Cf8-eY-PvD" firstAttribute="leading" secondItem="XHw-S6-dID" secondAttribute="leadingMargin" id="yzX-nE-eCO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jJC-On-biL"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="allergensLabel" destination="XLo-7i-bYQ" id="8IM-kE-oBT"/>
