@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CellAnimator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>67DF77A3B5AFA9FB329AD38EBCF25092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8BF081BE35AD5A41B3E5C858483888BA</key>
+		<key>C0070EAE1E66ADC4BB2812CD440AA9A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A677F2CFF4EAA289B448055A5584080F</key>
+		<key>F0679F064F87C1CFE763194CF8DDA86E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

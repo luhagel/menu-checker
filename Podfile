@@ -12,4 +12,5 @@ target 'Menu Checker' do
   pod 'Fabric'
   pod 'Answers'
   pod 'Material', '~> 1.0'
+  pod 'CellAnimator'
 end

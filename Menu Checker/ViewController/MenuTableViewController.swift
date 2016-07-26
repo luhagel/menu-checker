@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import CellAnimator
 
 class MenuTableViewController: UITableViewController {
     @IBOutlet var menuTableView: UITableView!
@@ -42,6 +43,8 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
+        
+        CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformHelix, andDuration: 0.5)
         
         var listToDisplay: [JSON]
         if filteredMenu.count == 0 {
