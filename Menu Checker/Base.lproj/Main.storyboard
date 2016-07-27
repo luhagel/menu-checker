@@ -119,7 +119,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="GYY-3V-IQ9">
-                        <barButtonItem key="leftBarButtonItem" systemItem="compose" id="VNR-4W-9gz">
+                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="VNR-4W-9gz">
                             <connections>
                                 <segue destination="z61-V5-5Kz" kind="show" id="xip-tJ-EbN"/>
                             </connections>
@@ -176,6 +176,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterButton" destination="e2s-co-KpO" id="n7x-X0-TMQ"/>
                         <outlet property="menuTableView" destination="WmC-xp-Szc" id="6Nw-py-sCO"/>
                     </connections>
                 </tableViewController>

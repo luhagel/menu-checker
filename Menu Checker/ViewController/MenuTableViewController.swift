@@ -12,10 +12,13 @@ import CellAnimator
 
 class MenuTableViewController: UITableViewController {
     @IBOutlet var menuTableView: UITableView!
+    @IBOutlet weak var filterButton: UIBarButtonItem!
     
     var restaurant: JSON? = nil
     var menu: JSON!
     var filteredMenu: [JSON] = []
+    var defaults: NSUserDefaults!
+    var userPrefs: [String]!
     
     @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
         self.filterMenu()
@@ -24,7 +27,10 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Menu"
+        defaults = NSUserDefaults.standardUserDefaults()
+        userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
         menu = restaurant!["menu"]
+        filterButton.title = "Filter (\(userPrefs.count))"
     }
 
     // MARK: - Table view data source
@@ -75,9 +81,6 @@ class MenuTableViewController: UITableViewController {
     
     //MARK: Methods
     func filterMenu() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
-        print(userPrefs)
         var jsonString: String = ""
         var categoriesJsonString: String = ""
         for category in self.menu.arrayValue {
