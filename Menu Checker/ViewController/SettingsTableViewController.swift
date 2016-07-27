@@ -21,6 +21,8 @@ class SettingsTableViewController: UITableViewController {
         "Soybeans"
     ]
     
+    var customAllergens = [String]()
+    
     var userPrefs = [String]()
 
     override func viewDidLoad() {
@@ -34,6 +36,10 @@ class SettingsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Allergens to Filter:"
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +80,6 @@ extension SettingsTableViewController : SettingTableViewCellDelegate {
     func toggleOn(sender: SettingTableViewCell) {
         userPrefs += [sender.seetingNameLabel.text!]
         userPrefs = Array(Set(userPrefs))
-        print(userPrefs)
     }
     func toggleOff(sender: SettingTableViewCell) {
         for (index, allergen) in userPrefs.enumerate() {

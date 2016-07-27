@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Settings Table View Controller-->
+        <!--Title-->
         <scene sceneID="Mde-Ph-Eca">
             <objects>
                 <viewController modalPresentationStyle="overCurrentContext" id="z61-V5-5Kz" customClass="SettingsTableViewController" customModule="Menu_Checker" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,8 +22,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heh-18-VlK">
-                                            <rect key="frame" x="8" y="8" width="234" height="28"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heh-18-VlK">
+                                            <rect key="frame" x="18" y="12" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -37,7 +37,9 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="jAf-NB-X3k" secondAttribute="trailing" constant="10" id="2p6-6r-TSX"/>
+                                        <constraint firstItem="heh-18-VlK" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="6hg-1b-tb2"/>
                                         <constraint firstItem="jAf-NB-X3k" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="ZBA-Yd-Y7O"/>
+                                        <constraint firstItem="heh-18-VlK" firstAttribute="leading" secondItem="XeN-Em-33m" secondAttribute="leadingMargin" constant="10" id="xCp-SS-IdT"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -51,6 +53,11 @@
                             <outlet property="delegate" destination="z61-V5-5Kz" id="VmC-Rc-prr"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="hkw-dW-bc2">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pob-d8-2Xv"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQC-zp-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
