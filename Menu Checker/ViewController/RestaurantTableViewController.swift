@@ -10,16 +10,20 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import AlamofireImage
+import FontAwesome_swift
 
 class RestaurantTableViewController: UITableViewController {
     @IBOutlet var restaurantTableView: UITableView!
     
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
     var restaurantData: JSON!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Restaurants"
-
+        let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
+        settingsButton.setTitleTextAttributes(attributes, forState: .Normal)
+        settingsButton.title = String.fontAwesomeIconWithName(.Cog)
         restaurantData = JSONHelper.pullData()
     }
 

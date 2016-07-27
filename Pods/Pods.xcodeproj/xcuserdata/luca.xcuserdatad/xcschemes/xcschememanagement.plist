@@ -19,17 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Material-io.cosmicmind.material.fonts.xcscheme</key>
+		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Material-io.cosmicmind.material.icons.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Material.xcscheme</key>
+		<key>FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,27 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04693735BCFA74B873DE04047ECC5FBA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>05094CC4A047119F7ADC14EE74C4881C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>08C670F14C5E0F92D52B4FD40051294F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1B006392A6DC63E06AC81DE6F08803B1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>67DF77A3B5AFA9FB329AD38EBCF25092</key>
+		<key>1088253F42C36418734CF3D95E31B8AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>804E09AA307C382285FD2EFA66EFFD23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E64D3E3A7AD1A87C822114B7473AE1E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C0070EAE1E66ADC4BB2812CD440AA9A3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F0679F064F87C1CFE763194CF8DDA86E</key>
+		<key>F0C3A2E7C5F6C689AE4607DE1C25AE74</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -119,7 +119,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="GYY-3V-IQ9">
-                        <barButtonItem key="leftBarButtonItem" systemItem="play" id="VNR-4W-9gz">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings_white" id="VNR-4W-9gz">
                             <connections>
                                 <segue destination="z61-V5-5Kz" kind="show" id="xip-tJ-EbN"/>
                             </connections>
@@ -127,6 +127,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="restaurantTableView" destination="yti-Yb-rBu" id="t8R-5b-eM7"/>
+                        <outlet property="settingsButton" destination="VNR-4W-9gz" id="4yD-vi-Yqm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaI-cB-Pha" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -276,4 +277,7 @@
             <point key="canvasLocation" x="2408" y="-495"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_settings_white" width="24" height="24"/>
+    </resources>
 </document>
