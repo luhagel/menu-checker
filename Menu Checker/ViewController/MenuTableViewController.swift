@@ -35,6 +35,11 @@ class MenuTableViewController: UITableViewController {
         userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
         menu = restaurant!["menu"]
         filterButton.title = "Filter (\(userPrefs.count))"
+        let backgroundImage = UIImage(named: "splashscreen")
+        let backgroundView = UIImageView(image: backgroundImage)
+        self.menuTableView.backgroundView = backgroundView
+        self.menuTableView.backgroundView?.contentMode = .ScaleAspectFill
+        self.menuTableView.tableFooterView = UIView(frame: CGRectZero)
     }
 
     // MARK: - Table view data source
@@ -70,6 +75,16 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.menu[section]["category_name"].stringValue
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let title = UILabel()
+        title.textColor = UIColor.whiteColor()
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = title.font
+        header.textLabel?.textColor = title.textColor
+        header.tintColor = UIColor.orangeColor()
     }
 
     // MARK: - Navigation
