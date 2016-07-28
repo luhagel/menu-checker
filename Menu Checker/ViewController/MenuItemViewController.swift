@@ -13,11 +13,21 @@ class MenuItemViewController: UIViewController {
     @IBOutlet weak var allergensLabel: UILabel!
     @IBOutlet weak var ingredientsTextView: UITextView!
     
+    @IBOutlet weak var bgView: UIView!
     var productInfo: JSON? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = productInfo!["display_name"].stringValue
+        
+        let blur = UIBlurEffect(style: .Dark)
+        let effectView = UIVisualEffectView(effect: blur)
+        effectView.frame = bgView.bounds
+        effectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        self.bgView.addSubview(effectView)
+        self.bgView.layer.cornerRadius = 10
+        self.bgView.layer.masksToBounds = true
+        
         let allergensJSONArray = productInfo!["allergens"].arrayValue
         let allergensArray:[String] = allergensJSONArray.map { $0.string!}
         

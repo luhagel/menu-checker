@@ -21,7 +21,11 @@ class MenuTableViewController: UITableViewController {
     var userPrefs: [String]!
     
     @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
-        self.filterMenu()
+        if userPrefs.count < 1 {
+            performSegueWithIdentifier("ShowSettings", sender: self)
+        } else {
+            self.filterMenu()
+        }
     }
     
     override func viewDidLoad() {
