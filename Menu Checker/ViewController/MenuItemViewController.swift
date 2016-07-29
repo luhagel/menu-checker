@@ -11,13 +11,15 @@ import SwiftyJSON
 
 class MenuItemViewController: UIViewController {
     @IBOutlet weak var allergensLabel: UILabel!
+    @IBOutlet weak var bgImageView: UIImageView!
     @IBOutlet weak var ingredientsTextView: UITextView!
-    
     @IBOutlet weak var bgView: UIView!
+    
     var productInfo: JSON? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = productInfo!["display_name"].stringValue
         
         let blur = UIBlurEffect(style: .Dark)
@@ -27,11 +29,12 @@ class MenuItemViewController: UIViewController {
         self.bgView.addSubview(effectView)
         self.bgView.layer.cornerRadius = 10
         self.bgView.layer.masksToBounds = true
+        self.view.sendSubviewToBack(bgImageView)
         
         let allergensJSONArray = productInfo!["allergens"].arrayValue
         let allergensArray:[String] = allergensJSONArray.map { $0.string!}
-        
         allergensLabel.text = allergensArray.joinWithSeparator(", ")
+        
         ingredientsTextView.text = productInfo!["ingredients"].stringValue
     }
 }

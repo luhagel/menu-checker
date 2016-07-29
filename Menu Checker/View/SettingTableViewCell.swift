@@ -18,6 +18,7 @@ class SettingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var seetingNameLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     @IBAction func settingSwitched(sender: AnyObject) {
         if self.settingSwitch.on {

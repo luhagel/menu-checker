@@ -30,20 +30,23 @@ class MenuTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Menu"
+        
         defaults = NSUserDefaults.standardUserDefaults()
         userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
         menu = restaurant!["menu"]
         filterButton.title = "Filter (\(userPrefs.count))"
+        
         let backgroundImage = UIImage(named: "splashscreen")
         let backgroundView = UIImageView(image: backgroundImage)
         self.menuTableView.backgroundView = backgroundView
         self.menuTableView.backgroundView?.contentMode = .ScaleAspectFill
+        
         self.menuTableView.tableFooterView = UIView(frame: CGRectZero)
     }
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.menu.arrayValue.count
     }
@@ -52,7 +55,7 @@ class MenuTableViewController: UITableViewController {
         if filteredMenu.count == 0 {
             return self.menu[section]["products"].arrayValue.count
         } else {
-            return filteredMenu[section]["products"].arrayValue.count
+            return self.filteredMenu[section]["products"].arrayValue.count
         }
     }
 
@@ -70,6 +73,7 @@ class MenuTableViewController: UITableViewController {
 
         let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue
         cell.productNameLabel.text = productName
+        
         return cell
     }
     

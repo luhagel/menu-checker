@@ -22,27 +22,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heh-18-VlK">
-                                            <rect key="frame" x="18" y="12" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jAf-NB-X3k">
                                             <rect key="frame" x="533" y="6" width="51" height="31"/>
                                             <connections>
                                                 <action selector="settingSwitched:" destination="wx1-s3-T6C" eventType="valueChanged" id="rxT-kG-Izt"/>
                                             </connections>
                                         </switch>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUY-4R-c4c">
+                                            <rect key="frame" x="18" y="3" width="37" height="37"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="37" id="O12-xH-3rb"/>
+                                                <constraint firstAttribute="width" constant="37" id="gJJ-aj-s6r"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heh-18-VlK">
+                                            <rect key="frame" x="63" y="11" width="42" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="jAf-NB-X3k" secondAttribute="trailing" constant="10" id="2p6-6r-TSX"/>
-                                        <constraint firstItem="heh-18-VlK" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="6hg-1b-tb2"/>
+                                        <constraint firstItem="oUY-4R-c4c" firstAttribute="leading" secondItem="XeN-Em-33m" secondAttribute="leadingMargin" constant="10" id="9wA-9e-yng"/>
+                                        <constraint firstItem="heh-18-VlK" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="Jvf-f2-Tdn"/>
+                                        <constraint firstItem="oUY-4R-c4c" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="Wa6-6g-YsE"/>
                                         <constraint firstItem="jAf-NB-X3k" firstAttribute="centerY" secondItem="XeN-Em-33m" secondAttribute="centerY" id="ZBA-Yd-Y7O"/>
-                                        <constraint firstItem="heh-18-VlK" firstAttribute="leading" secondItem="XeN-Em-33m" secondAttribute="leadingMargin" constant="10" id="xCp-SS-IdT"/>
+                                        <constraint firstItem="heh-18-VlK" firstAttribute="leading" secondItem="oUY-4R-c4c" secondAttribute="trailing" constant="8" id="rnr-tU-vru"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="iconImageView" destination="oUY-4R-c4c" id="aJJ-og-I1V"/>
                                     <outlet property="seetingNameLabel" destination="heh-18-VlK" id="RoQ-bx-0fe"/>
                                     <outlet property="settingSwitch" destination="jAf-NB-X3k" id="uR0-IN-cQb"/>
                                 </connections>
@@ -58,6 +68,9 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pob-d8-2Xv"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="CAl-nl-4eN" id="a02-an-m8d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PQC-zp-bPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -186,7 +199,7 @@
                     <connections>
                         <outlet property="filterButton" destination="e2s-co-KpO" id="n7x-X0-TMQ"/>
                         <outlet property="menuTableView" destination="WmC-xp-Szc" id="6Nw-py-sCO"/>
-                        <segue destination="z61-V5-5Kz" kind="push" identifier="ShowSettings" id="vt1-S3-Qmb"/>
+                        <segue destination="z61-V5-5Kz" kind="show" identifier="ShowSettings" id="vt1-S3-Qmb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gGc-5Y-TQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,6 +296,7 @@
                     </view>
                     <connections>
                         <outlet property="allergensLabel" destination="XLo-7i-bYQ" id="8IM-kE-oBT"/>
+                        <outlet property="bgImageView" destination="d2U-Jh-WRX" id="3vK-dz-htO"/>
                         <outlet property="bgView" destination="4CF-hY-VzA" id="Cgd-1a-Sw4"/>
                         <outlet property="ingredientsTextView" destination="Cf8-eY-PvD" id="Dyi-PW-QwW"/>
                     </connections>

@@ -9,20 +9,20 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
+    @IBOutlet var settingsTableView: UITableView!
     let defaults = NSUserDefaults.standardUserDefaults()
     let allergens = [
         "Milk",
         "Eggs",
         "Fish",
         "Shellfish",
-        "Tree nuts",
+        "TreeNuts",
         "Peanuts",
         "Wheat",
         "Soybeans"
     ]
     
     var customAllergens = [String]()
-    
     var userPrefs = [String]()
 
     override func viewDidLoad() {
@@ -30,10 +30,10 @@ class SettingsTableViewController: UITableViewController {
         
         title = "Settings"
         userPrefs = defaults.arrayForKey("UserPrefs") as! [String]
+        self.settingsTableView.tableFooterView = UIView(frame: CGRectZero)
     }
 
     // MARK: - Table view data source
-
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -50,6 +50,7 @@ class SettingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Setting", forIndexPath: indexPath) as! SettingTableViewCell
 
         cell.seetingNameLabel.text = allergens[indexPath.row]
+        cell.iconImageView.image = UIImage(named: allergens[indexPath.row])
         if isActive(allergens[indexPath.row]) {
             cell.settingSwitch.on = true
         }
@@ -70,9 +71,7 @@ class SettingsTableViewController: UITableViewController {
     // MARK: - Navigation
     override func viewWillDisappear(animated : Bool) {
         super.viewWillDisappear(animated)
-        if (self.isMovingFromParentViewController()){
-            defaults.setObject(userPrefs, forKey: "UserPrefs")
-        }
+        defaults.setObject(userPrefs, forKey: "UserPrefs")
     }
 }
 
