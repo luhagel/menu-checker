@@ -31,11 +31,11 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Menu"
-        
         defaults = NSUserDefaults.standardUserDefaults()
         userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
         menu = restaurant!["menu"]
+        
+        title = "Menu"
         filterButton.title = "Filter (\(userPrefs.count))"
         
         let backgroundImage = UIImage(named: "splashscreen")
@@ -62,7 +62,7 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
         
-        CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformHelix, andDuration: 0.5)
+        CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformTipIn, andDuration: 0.5)
         
         var listToDisplay: [JSON]
         if filteredMenu.count == 0 {
@@ -73,7 +73,20 @@ class MenuTableViewController: UITableViewController {
 
         let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue
         cell.productNameLabel.text = productName
-        
+        cell.productNameLabel.sizeToFit()
+        if cell.contentView.subviews.filter({$0 is UIImageView}).count < 1 {
+            let allergensArray = self.menu[indexPath.section]["products"][indexPath.row]["allergens"].arrayValue
+            var newIconXPos = cell.productNameLabel.frame.width + 20
+            for allergen in allergensArray {
+                let allergenIcon = UIImageView(image: UIImage(named: allergen.stringValue))
+                allergenIcon.frame = CGRect(x: newIconXPos, y: 10, width: 25, height: 25)
+                allergenIcon.backgroundColor = UIColor.whiteColor()
+                allergenIcon.layer.cornerRadius = 3
+                allergenIcon.layer.masksToBounds = true
+                cell.contentView.addSubview(allergenIcon)
+                newIconXPos += 27
+            }
+        }
         return cell
     }
     

@@ -7,14 +7,7 @@
       "menu": [
         {
           "category_name": "Bread",
-          "products": [
-            {
-              "display_name": "Italian Bread",
-              "allergens": [
-                "Wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
+          "products": [       
             {
               "display_name": "9-Grain Wheat",
               "allergens": [
@@ -39,17 +32,46 @@
               "ingredients": "Whole wheat flour, water, yeast, soybean oil, sugar, contains less than 2% of the following: whole wheat flakes, oats, nonfat dry milk, wheat gluten, salt, calcium carbonate, distilled vinegar, chia seeds, amaranth seeds, cultured wheat flour, whole grain barley, corn, flaxseed, whole rye, whole grain triticale, wheat germ, leavening (sodium acid pyrophosphate, baking soda, monocalcium phosphate), enzyme, oat fiber, sea salt, yeast extract, vitamin D2, ascorbic acid, calcium sulfate."
             },
             {
+              "display_name": "Hearty Italian Bread",
+              "allergens": [
+                "Wheat"
+              ],
+              "ingredients": "Subway® Italian bread and yellow cornmeal."
+            },
+            {
+              "display_name": "Honey Oat Bread",
+              "allergens": [
+                "Soybeans",
+                "Wheat"
+              ],
+              "ingredients": "Subway® 9-Grain Wheat Bread, honey oat topping (rolled oats, brown sugar, honey, wheat starch, and natural flavor)."
+            },
+            {
+              "display_name": "Italian Bread",
+              "allergens": [
+                "Wheat"
+              ],
+              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+            },
+            {
               "display_name": "Italian Herbs & Cheese Bread",
               "allergens": [
                 "Wheat",
                 "Milk"
               ],
               "ingredients": "Subway® Italian Bread, Monterey Jack cheese blend [(Monterey Jack cheese (cultured pasteurized milk, salt, enzymes), cheddar cheese (cultured pasteurized milk, salt, enzymes, annatto color), potato starch and powdered cellulose added to prevent caking, natamycin (a natural mold inhibitor)], corn maltodextrin, ground rice, toasted bread crumbs (enriched wheat flour (niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), sugar, sea salt, yeast), salt, spices (including oregano), dehydrated garlic, parmesan cheese (part skim milk, cheese cultures, salt, enzymes), modified corn starch, sunflower oil, citric acid, yeast extract, lactic acid, natural flavor, and not more than 2% silicon dioxide added (as anticaking agent)."
+            },
+            {
+              "display_name": "Wrap",
+              "allergens": [
+                "Wheat"
+              ],
+              "ingredients": "Bleached enriched wheat flour (wheat flour, malted barley flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid), water, soybean oil, hydrogenated vegetable oil (contains one or more of the following: cottonseed oil, soybean oil) with mono- and diglycerides added, potato starch with monoglyceride, sugar, contains 2% or less of the following: salt, vital wheat gluten, baking powder (sodium acid pyrophosphate, sodium bicarbonate, corn starch, monocalcium phosphate), monoglycerides and citric acid to preserve freshness, fumaric acid, sodium bicarbonate, dough conditioner (wheat flour, calcium sulfate, sorbic acid), sodium propionate and potassium sorbate (preservatives)."
             }
           ]
       },
       {
-        "category_name": "Sauces",
+        "category_name": "Condiments",
         "products": [
           {
             "display_name": "Ranch",
@@ -59,9 +81,8 @@
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
           },
           {
-            "display_name": "mayo",
+            "display_name": "Mayo",
             "allergens": [
-              "Wheat",
               "Milk",
               "Eggs"
             ],
@@ -73,6 +94,256 @@
               "Wheat"
             ],
             "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+          }
+        ]
+      },
+      {
+        "category_name": "Toppings",
+        "products": [
+          {
+            "display_name": "Bacon Slices",
+            "allergens": [
+            ],
+            "ingredients": "Pork, water, salt, sugar, natural smoke flavor, sodium phosphates, sodium erythorbate, sodium nitrite, smoke."
+          },
+          {
+            "display_name": "Genoa Salami",
+            "allergens": [
+            ],
+            "ingredients": "Pork, beef, salt, water, corn syrup, dextrose, sugar, wine, sodium erythorbate, flavorings, sodium nitrate, spices, garlic, lactic acid starter culture, sodium nitrite. Pepperoni: Pork, beef, salt, dextrose, water, spices, corn syrup, paprika, oleoresin of paprika, flavorings, sodium erythorbate, lactic acid starter culture, sodium nitrite. HAM (Black Forest) Ham cured with: water, dextrose, 2% or less of modified food starch, salt, vinegar, seasoning [maltodextrin, flavors, sunflower oil, and smoked flavor], sodium phosphate, sodium erythorbate, sodium nitrite."
+          },
+          {
+            "display_name": "Carved Turkey",
+            "allergens": [
+
+            ],
+            "ingredients": "Turkey breast, turkey broth, contains 2% of less dextrose, salt, sodium phosphate. Browned in vegetable oil (soybean and peanut oil). Please note that the peanut oil used in this product is highly refined and FDA exempts labeling refined oils as allergens since they can be safely consumed by food-allergic individuals."
+          },
+          {
+            "display_name": "Chicken Breast Patty",
+            "allergens": [
+            ],
+            "ingredients": "Chicken breast with rib meat, water, chicken flavor (Sea salt, sugar, chicken stock, salt, flavors, canola oil, onion powder, garlic powder, spice, chicken fat, honey), potato starch, sodium phosphate, carrageenan."
+          },
+          {
+            "display_name": "Chicken Breast Strips",
+            "allergens": [
+              "Soybeans"
+            ],
+            "ingredients": "Boneless skinless chicken breast with rib meat, water, contains 2% or less soy protein concentrate, modified potato starch, sodium phosphate, potassium chloride, salt, maltodextrin, yeast extract, flavors, natural flavors, dextrose, caramelized sugar, paprika, vinegar solids, paprika extract, chicken broth."
+          },
+          {
+            "display_name": "Chicken Strips(Teriyaki)",
+            "allergens": [
+              "Soybeans",
+              "Wheat",
+              "SesameSeeds"
+            ],
+            "ingredients": "CHICKEN STRIPS (Teriyaki glazed): Subway Chicken Breast Strips (see above), teriyaki glaze (water, corn syrup, soy sauce (water, wheat, soybean, salt, sodium benzoate [a preservative]), rice vinegar, modified corn starch, sugar, tomato paste, ginger, vinegar, garlic, sesame oil, sesame seed, salt, dehydrated green onion, dehydrated red bell pepper, natural flavors, autolyzed yeast extract, dehydrated garlic, sodium benzoate (a preservative), spices, citric acid, soybean oil, dry yeast (torula), dehydrated onion.)."
+          },
+          {
+            "display_name": "Cold Cut Combo",
+            "allergens": [
+            ],
+            "ingredients": "Turkey Bologna: Mechanically separated turkey, water, contains less than 2% of: salt, corn syrup solids, potassium lactate, dextrose, sodium diacetate, sodium erythorbate, sodium nitrite, flavorings. Turkey Ham: Cured turkey thigh meat, salt, contains less than 2% of: potassium lactate, brown sugar, sodium tripolyphosphate, dextrose, sodium diacetate, sodium erythorbate, smoke flavor, sodium nitrite, water. Turkey Salami: Dark turkey, mechanically separated turkey, water, salt, contains less than 2% of: potassium lactate, sugar, sodium tripolyphosphate, dextrose, spice and flavorings, sodium diacetate, sodium erythorbate, smoke flavor, sodium nitrite."
+          },
+          {
+            "display_name": "Egg Omelet Patty (Regular)",
+            "allergens": [
+              "Eggs",
+              "Milk",
+              "Soybeans"
+            ],
+            "ingredients": "Whole eggs, egg whites, nonfat dry milk, water. Contains 2% or less of the following: soybean oil, liquid butter alternative (liquid and hydrogenated soybean oil, salt, soy lecithin, natural flavor, tocopherols (vitamin E), corn starch, salt, xanthan gum, citric acid, white pepper, beta-carotene (color)"
+          },
+          {
+            "display_name": "Egg White Omelet Patty",
+            "allergens": [
+              "Eggs"
+            ],
+            "ingredients": "Egg whites, corn starch. Contains 2% or less of the following: butter flavored soybean oil (soybean oil, natural flavor), salt, xanthan gum, white pepper."
+          },
+          {
+            "display_name": "Ham (Black Forest)",
+            "allergens": [
+            ],
+            "ingredients": "Ham cured with: water, dextrose, 2% or less of modified food starch, salt, vinegar, seasoning [maltodextrin, flavors, sunflower oil, and smoked flavor], sodium phosphate, sodium erythorbate, sodium nitrite."
+          },
+          {
+            "display_name": "Meatballs",
+            "allergens": [
+              "Milk",
+              "Soybeans",
+              "Wheat"
+            ],
+            "ingredients": "Beef, water, bread crumbs [toasted wheat crumbs (enriched wheat flour {wheat flour, niacin, reduced iron, thiamine mononitrate, riboflavin, folic acid}, sugar, salt, soybean oil, yeast)], textured soy protein concentrate, seasoning (dehydrated onion and garlic, salt, spice, dehydrated parsley, soybean oil), soy protein concentrate, Romano cheese (made from pasteurized part-skim cow’s milk, cheese cultures, salt, enzymes). Marinara Sauce: tomatoes, tomato puree (water, tomato paste), sugar, soybean oil, modified food starch, salt, dehydrated onions, spices, onion powder."
+          },
+          {
+            "display_name": "Roast Beef",
+            "allergens": [
+            ],
+            "ingredients": "Fully cooked sliced roast beef upon cooking contains up to 10% solution of water, salt, dextrose, corn syrup, sodium phosphates, garlic powder, onion powder, natural flavor. Coated with: natural flavor, potato maltodextrin, salt, spices, garlic powder, onion powder, sugar."
+          },
+          {
+            "display_name": "Rotisserie-Style Chicken",
+            "allergens": [
+            ],
+            "ingredients": "White meat chicken, water, soybean oil, seasoning (chicken broth powder, chicken powder, onion powder, natural flavor), salt, sunflower oil, dextrose, sodium phosphate, rotisserie chicken flavor (chicken broth, chicken skins, salt, natural flavor, xanthan gum, maltodextin, gum arabic), spice extractives."
+          },
+          {
+            "display_name": "Seafood Sensation",
+            "allergens": [
+              "Eggs",
+              "Fish",
+              "Shellfish",
+              "Soybeans",
+              "Wheat"
+            ],
+            "ingredients": "Alaskan Pollock, water, Pacific Whiting, cornstarch, potatostarch,wheatstarch,sugar,sorbitol,contains2%orlessofthefollowing:Snowcrabmeat, natural and artificial flavors, refined fish oil, egg whites, carrageenan, spices (allspice, bay, black pepper, cardamom, cassia, celery, clove, ginger, mace, nutmeg, red pepper), salt, modified potato starch, calcium carbonate, sodium tripolyphosphate, tetrasodium phosphate, citric acid, color (titanium dioxide, carmine, paprika oleoresin and caramel Color). Subway® regular mayonnaise."
+          },
+          {
+            "display_name": "Steak",
+            "allergens": [
+            ],
+            "ingredients": "Seasoned beef (beef, water, salt, modified corn starch, sugar, dextrose, sodium phosphate, tomato powder, yeast extract, natural flavors, natural brown color blend (vegetable juice color, turmeric), lemon powder (maltodextrin), garlic powder, onion powder, hydrolyzed corn protein, citric acid.)"
+          },
+          {
+            "display_name": "Tuna",
+            "allergens": [
+              "Eggs",
+              "Fish"
+            ],
+            "ingredients": "Tuna, Subway® regular mayonnaise, water, salt."
+          },
+          {
+            "display_name": "Turkey Breast",
+            "allergens": [
+            ],
+            "ingredients": "(thin sliced) Turkey breast, water, dextrose, salt, carrageenan, sodium phosphate, browned in soybean oil."
+          },
+          {
+            "display_name": "Veggie Patty",
+            "allergens": [
+              "Soybeans",
+              "Eggs",
+              "Milk",
+              "Wheat"
+            ],
+            "ingredients": "Vegetables (mushrooms, water chestnuts, onions, carrots, green bell peppers, red bell peppers, black olives), textured vegetable protein (soy protein concentrate, wheat gluten, water for hydration), egg whites, cooked brown rice (water, brown rice), rolled oats, corn oil, calcium caseinate, soy sauce (water, soybeans, salt, wheat). Contains 2% or less of onion powder, corn starch, salt, hydrolyzed corn, soy, and wheat protein, autolyzed yeast extract, natural flavors from non-meat sources, sugar, soy protein isolate, spices, garlic powder, dextrose, jalapeño pepper powder, celery extract."
+          }
+        ]
+      },
+      {
+        "category_name": "Cheese",
+        "products": [
+          {
+            "display_name": "American Cheese",
+            "allergens": [
+              "Milk",
+              "Soybeans"
+            ],
+            "ingredients": "Milk, water, cream, cheese culture, sodium citrate, salt, sorbic acid (preservative), citric acid, tetrasodium pyrophosphate, soy lecithin, enzymes."
+          },
+          {
+            "display_name": "Cheddar Cheese",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "Cultured pasteurized milk, salt, enzymes, annatto color."
+          },
+          {
+            "display_name": "Monterey Cheese Blend",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "(shredded) Monterey Jack cheese (cultured pasteurized milk, salt, enzymes), Cheddar Cheese (cultured pasteurized milk, salt, enzymes, annatto color), potato starch and powdered cellulose added to prevent caking, natamycin (a natural mold inhibitor)."
+          },
+          {
+            "display_name": "Parmesan Cheese",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "Parmesan cheese (cultured pasteurized part-skim milk, salt, enzymes), powdered cellulose added to prevent caking."
+          },
+          {
+            "display_name": "Pepperjack Cheese",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "Cultured pasteurized milk, jalapeno peppers, salt, calcium chloride and enzymes."
+          },
+          {
+            "display_name": "Provelone Cheese",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "Cultured pasteurized milk, salt, enzymes."
+          },
+          {
+            "display_name": "Swiss Cheese",
+            "allergens": [
+              "Milk"
+            ],
+            "ingredients": "Part skim milk, cheese culture, salt, enzymes."
+          }
+        ]
+      },
+      {
+        "category_name": "Vegetables",
+        "products": [
+          {
+            "display_name": "Banana Peppers",
+            "allergens": [
+            ],
+            "ingredients": "Banana peppers, water, distilled vinegar, salt, calcium chloride, sodium benzoate (preservative), turmeric, sodium metabisulfite (preservative), natural flavors and polysorbate 80."
+          },
+          {
+            "display_name": "Cucumbers",
+            "allergens": [
+            ],
+            "ingredients": "Fresh ripe cucumbers"
+          },
+          {
+            "display_name": "Green Peppers",
+            "allergens": [
+            ],
+            "ingredients": "Fresh green bell peppers"
+          },
+          {
+            "display_name": "Jalapeno Pepper Slices",
+            "allergens": [
+            ],
+            "ingredients": "Jalapeno peppers, water, distilled vinegar, salt, natural flavorings, calcium chloride, sodium benzoate (preservative)."
+          },
+          {
+            "display_name": "Pickles",
+            "allergens": [
+            ],
+            "ingredients": "Cucumbers, water, distilled vinegar, salt, calcium chloride, sodium benzoate (preservative), alum, natural flavors, polysorbate 80, turmeric."
+          },
+          {
+            "display_name": "Lettuce",
+            "allergens": [
+            ],
+            "ingredients": "Fresh iceberg variety"
+          },
+          {
+            "display_name": "Olives",
+            "allergens": [
+            ],
+            "ingredients": "Ripe olives, water, salt, ferrous gluconate"
+          },
+          {
+            "display_name": "Onions",
+            "allergens": [
+            ],
+            "ingredients": "Jumbo red onions"
+          },
+          {
+            "display_name": "Tomatoes",
+            "allergens": [
+            ],
+            "ingredients": "Fresh red ripe tomatoes"
           }
         ]
       }

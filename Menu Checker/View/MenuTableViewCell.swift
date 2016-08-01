@@ -10,4 +10,13 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
     @IBOutlet weak var productNameLabel: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.productNameLabel.text = ""
+        let icons = self.contentView.subviews.filter{$0 is UIImageView}
+        for icon in icons {
+            icon.removeFromSuperview()
+        }
+    }
 }
