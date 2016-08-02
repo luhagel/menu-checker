@@ -14,12 +14,12 @@ class MenuTableViewController: UITableViewController {
     @IBOutlet var menuTableView: UITableView!
     @IBOutlet weak var filterButton: UIBarButtonItem!
     
-    var restaurant: JSON? = nil
-    var menu: JSON!
-    var filteredMenu: [JSON] = []
+    var restaurant: JSON?       = []
+    var filteredMenu: [JSON]    = []
+    var listToDisplay: [JSON]   = []
     var defaults: NSUserDefaults!
     var userPrefs: [String]!
-    var listToDisplay: [JSON] = []
+    var menu: JSON!
     
     @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
         if userPrefs.count < 1 {
@@ -65,11 +65,6 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
-        
-        let icons = cell.contentView.subviews.filter{$0 is UIImageView}
-        for icon in icons {
-            icon.removeFromSuperview()
-        }
         
         CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformTipIn, andDuration: 0.5)
         
