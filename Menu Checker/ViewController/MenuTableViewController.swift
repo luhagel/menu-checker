@@ -19,12 +19,16 @@ class MenuTableViewController: UITableViewController {
     var filteredMenu: [JSON] = []
     var defaults: NSUserDefaults!
     var userPrefs: [String]!
+    var listToDisplay: [JSON] = []
     
     @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
         if userPrefs.count < 1 {
             performSegueWithIdentifier("ShowSettings", sender: self)
+            userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
+            filterButton.title = "Filter (\(userPrefs.count))"
         } else {
             self.filterMenu()
+            self.menuTableView.reloadData()
         }
     }
     
@@ -62,20 +66,24 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
         
+        let icons = cell.contentView.subviews.filter{$0 is UIImageView}
+        for icon in icons {
+            icon.removeFromSuperview()
+        }
+        
         CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformTipIn, andDuration: 0.5)
         
-        var listToDisplay: [JSON]
         if filteredMenu.count == 0 {
-            listToDisplay = self.menu.arrayValue
+            self.listToDisplay = self.menu.arrayValue
         } else {
-            listToDisplay = self.filteredMenu
+            self.listToDisplay = self.filteredMenu
         }
 
         let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue
         cell.productNameLabel.text = productName
         cell.productNameLabel.sizeToFit()
         if cell.contentView.subviews.filter({$0 is UIImageView}).count < 1 {
-            let allergensArray = self.menu[indexPath.section]["products"][indexPath.row]["allergens"].arrayValue
+            let allergensArray = self.listToDisplay[indexPath.section]["products"][indexPath.row]["allergens"].arrayValue
             var newIconXPos = cell.productNameLabel.frame.width + 20
             for allergen in allergensArray {
                 let allergenIcon = UIImageView(image: UIImage(named: allergen.stringValue))
@@ -110,7 +118,7 @@ class MenuTableViewController: UITableViewController {
         if segue.identifier == "ShowProduct" {
             let destination = segue.destinationViewController as! MenuItemViewController
             if let indexPath = menuTableView.indexPathForSelectedRow {
-                destination.productInfo = self.menu[indexPath.section]["products"][indexPath.row]
+                destination.productInfo = self.listToDisplay[indexPath.section]["products"][indexPath.row]
             }
         }
     }
@@ -134,7 +142,6 @@ class MenuTableViewController: UITableViewController {
         let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
         let jsonObject = JSON(data: data!)
         filteredMenu = jsonObject["menu"].arrayValue
-        menuTableView.reloadData()
     }
     
     func isAllergic(allergens: [JSON], userPrefs: [String]) -> Bool {
