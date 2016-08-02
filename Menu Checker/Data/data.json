@@ -565,27 +565,7 @@
         {
           "category_name": "Bread",
           "products": [
-            {
-              "display_name": "Italian Bread",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Whole Grain",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Soft Roll",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            }
+        
           ]
         }
       ]
@@ -624,102 +604,341 @@
       ]
     },
     {
-      "restaurant_name": "Starbucks",
-      "img": "https://pbs.twimg.com/profile_images/629049594047893504/ALcBvCnr.png",
-      "source_link": "https://subway.com/us/ingredients",
+      "restaurant_name": "McDonalds",
+      "img": "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD.jpg",
+      "source_link": "https://mcdonalds.co.nz/sites/mcdonalds.co.nz/files/Food%20Sensitivity.pdf",
       "menu": [
         {
-          "category_name": "Bread",
+          "category_name": "Beef",
           "products": [
             {
-              "display_name": "Italian Bread",
+              "display_name": "Hamburger",
               "allergens": [
-                "wheat"
+                "Wheat",
+                "Soybeans"
               ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+              "ingredients": "~undisclosed~"
             },
             {
-              "display_name": "Whole Grain",
+              "display_name": "Cheeseburger",
               "allergens": [
-                "wheat"
+                "Wheat",
+                "Milk",
+                "Soybeans"
               ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+              "ingredients": "~undisclosed~"
             },
             {
-              "display_name": "Soft Roll",
+              "display_name": "Quarter Pounder",
               "allergens": [
-                "wheat"
+                "Wheat",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
               ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Big Mac",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "The Boss",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Serious Angus",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Almighty Angus",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Clubhouse Burger",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Chicken & Fish",
+          "products": [
+            {
+              "display_name": "Filet-O-Fish",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "Fish"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McChicken",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Chicken McBites",
+              "allergens": [
+                "Wheat"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Chicken McNuggets",
+              "allergens": [
+                "Wheat"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Chick'n McCheese",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Chicken and Mayo Burger",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Chicken and Mayo Burger Deluxe",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Clubhouse Chicken Burger - Grilled",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Clubhouse Chicken Burger - Crispy",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Georgie Pie",
+          "products": [
+            {
+              "display_name": "Steak Mince & Cheese Pie",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Butter Chicken Pie",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Plum \"N\" Custard Pie",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Wraps",
+          "products": [
+            {
+              "display_name": "Crispy Chicken Snack Wrap",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Grilled Chicken Snack Wrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Crispy Chicken & Aioli McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Crispy Chicken & Spicy Mayo McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Crispy Chicken & Honey Soy McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Grilled Chicken & Aioli McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Grilled Chicken Spicey Mayo McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Grilled Chicken Honey Soy McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Steak & Aioli McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Steak & BBQ McWrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "Fish"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Steak Taster Wrap",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
             }
           ]
         }
       ]
     },
     {
-      "restaurant_name": "Starbucks",
-      "img": "https://pbs.twimg.com/profile_images/629049594047893504/ALcBvCnr.png",
-      "source_link": "https://subway.com/us/ingredients",
+      "restaurant_name": "Coming Soon!",
+      "img": "",
+      "source_link": "https://mcdonalds.co.nz/sites/mcdonalds.co.nz/files/Food%20Sensitivity.pdf",
       "menu": [
-        {
-          "category_name": "Bread",
-          "products": [
-            {
-              "display_name": "Italian Bread",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Whole Grain",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Soft Roll",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "restaurant_name": "Starbucks",
-      "img": "https://pbs.twimg.com/profile_images/629049594047893504/ALcBvCnr.png",
-      "source_link": "https://subway.com/us/ingredients",
-      "menu": [
-        {
-          "category_name": "Bread",
-          "products": [
-            {
-              "display_name": "Italian Bread",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Whole Grain",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Soft Roll",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            }
-          ]
-        }
       ]
     }
   ]
