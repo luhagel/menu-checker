@@ -558,52 +558,6 @@
       ]
     },
     {
-      "restaurant_name": "Burger King",
-      "img": "https://pbs.twimg.com/profile_images/694921357864386563/p0nF8Bj8.jpg",
-      "source_link": "https://subway.com/us/ingredients",
-      "menu": [
-        {
-          "category_name": "Bread",
-          "products": [
-        
-          ]
-        }
-      ]
-    },
-    {
-      "restaurant_name": "Starbucks",
-      "img": "https://pbs.twimg.com/profile_images/629049594047893504/ALcBvCnr.png",
-      "source_link": "https://subway.com/us/ingredients",
-      "menu": [
-        {
-          "category_name": "Bread",
-          "products": [
-            {
-              "display_name": "Italian Bread",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Whole Grain",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            },
-            {
-              "display_name": "Soft Roll",
-              "allergens": [
-                "wheat"
-              ],
-              "ingredients": "Enriched flour (wheat flour, niacin, iron, thiamin mononitrate, riboflavin, folic acid), water, yeast, sugar, contains 2% or less of: soybean oil, calcium carbonate, wheat gluten, salt, sunflower lecithin, ascorbic acid, yeast extract, Vitamin D2, enzymes. Contains wheat."
-            }
-          ]
-        }
-      ]
-    },
-    {
       "restaurant_name": "McDonalds",
       "img": "https://pbs.twimg.com/profile_images/658746945565954048/Zrf2h3RD.jpg",
       "source_link": "https://mcdonalds.co.nz/sites/mcdonalds.co.nz/files/Food%20Sensitivity.pdf",
@@ -758,7 +712,7 @@
                 "Eggs",
                 "Milk",
                 "Soybeans",
-                "Soybeans"
+                "SesameSeeds"
               ],
               "ingredients": "~undisclosed~"
             },
@@ -931,13 +885,455 @@
               "ingredients": "~undisclosed~"
             }
           ]
+        },
+        {
+          "category_name": "Fruit & Salad",
+          "products": [
+            {
+              "display_name": "Fruit Bag - Apple",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Garden Mixed Salad",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Warm Crispy Chicken Salad",
+              "allergens": [
+                "Wheat",
+                "Eggs"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Warm Grilled Chicken Salad",
+              "allergens": [
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Dressing - Heinz Balsamic",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Dressing - Heinz Italian",
+              "allergens": [
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Dressing - Zesty Portugeuse",
+              "allergens": [
+                "Wheat",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Thai Style Dressing",
+              "allergens": [
+                "Wheat",
+                "Soybeans",
+                "Fish",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Sides",
+          "products": [
+            {
+              "display_name": "French Fries",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Condiments",
+          "products": [
+            {
+              "display_name": "Sauce - Barbecue",
+              "allergens": [
+                "Wheat",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sauce - Ketchup",
+              "allergens": [
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sauce - Mayonaise",
+              "allergens": [
+                "Eggs",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sauce - Mustard",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sauce - Sweet & Sour",
+              "allergens": [
+                "Wheat",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Hotcake Syrup",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Strawberry Jam Portion",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Whipped Butter Portion",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Breakfast",
+          "products": [
+            {
+              "display_name": "Bagel - Toasted with Jam&Butter",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Bagel - BLT",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Bagel - NYC Benedict",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "English Muffin",
+              "allergens": [
+                "Wheat",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Hashbrown",
+              "allergens": [
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Hotcakes",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Kiwi Big Breakfast",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McMuffin - Chicken",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans",
+                "SesameSeeds"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McMuffin - Bacon & Egg",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McMuffin - Massive",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McMuffin - Sausage & Egg",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McMuffin - Sausage",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Wrap - Egg, Tomato & Bacon",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans",
+                "Fish"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Wrap - English Brekkie",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Soybeans",
+                "Fish"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Smoothies & Frappes",
+          "products": [
+            {
+              "display_name": "Bananaberry Smash Smoothie",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Mango Pineapple Smash Smoothie",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Mocha Frappe",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Choc Whirl Frappe",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Coffee Kick Frappe",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
+        },
+        {
+          "category_name": "Desserts",
+          "products": [
+            {
+              "display_name": "Apple Pie",
+              "allergens": [
+                "Wheat",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Birthday Party Chocolate Cake",
+              "allergens": [
+                "Wheat",
+                "Eggs",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Flake",
+              "allergens": [
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Flake Cone",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McFlurry - Crunchie McFlurry",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McFlurry - M&M Minis",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McFlurry - Oreo",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McFlurry - KitKat",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "McFlurry - Malteser",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Soft Serve Cone",
+              "allergens": [
+                "Wheat",
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sundae - Caramel",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sundae - Hot Fudge",
+              "allergens": [
+                "Milk",
+                "Soybeans"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sundae - Strawberry ",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            },
+            {
+              "display_name": "Sundae - no topping",
+              "allergens": [
+                "Milk"
+              ],
+              "ingredients": "~undisclosed~"
+            }
+          ]
         }
       ]
     },
     {
       "restaurant_name": "Coming Soon!",
       "img": "",
-      "source_link": "https://mcdonalds.co.nz/sites/mcdonalds.co.nz/files/Food%20Sensitivity.pdf",
+      "source_link": "",
       "menu": [
       ]
     }

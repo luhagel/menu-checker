@@ -74,12 +74,12 @@ class MenuTableViewController: UITableViewController {
             self.listToDisplay = self.filteredMenu
         }
 
-        let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue
+        let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue.trunc(22, trailing: "...")
         cell.productNameLabel.text = productName
         cell.productNameLabel.sizeToFit()
         if cell.contentView.subviews.filter({$0 is UIImageView}).count < 1 {
             let allergensArray = self.listToDisplay[indexPath.section]["products"][indexPath.row]["allergens"].arrayValue
-            var newIconXPos = min(cell.productNameLabel.frame.width, cell.productNameLabel.bounds.width) + 20
+            var newIconXPos = cell.productNameLabel.frame.width + 20
             for allergen in allergensArray {
                 let allergenIcon = UIImageView(image: UIImage(named: allergen.stringValue))
                 allergenIcon.frame = CGRect(x: newIconXPos, y: 10, width: 25, height: 25)
@@ -148,5 +148,15 @@ class MenuTableViewController: UITableViewController {
             }
         }
         return false
+    }
+}
+
+extension String {
+    func trunc(length: Int, trailing: String? = "...") -> String {
+        if self.characters.count > length {
+            return self.substringToIndex(self.startIndex.advancedBy(length)) + (trailing ?? "")
+        } else {
+            return self
+        }
     }
 }
