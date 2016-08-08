@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftyJSON
-import Alamofire
 
 class JSONHelper {
     static func pullData() -> JSON { //TODO: Pull only selcted restaurant, pull from server

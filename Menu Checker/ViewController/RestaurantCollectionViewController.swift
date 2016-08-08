@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-import AlamofireImage
 import FontAwesome_swift
 
 private let reuseIdentifier = "Cell"
@@ -67,8 +66,7 @@ class RestaurantCollectionViewController: UICollectionViewController {
         cell.sendSubviewToBack(effectView)
         
         // Configure the cell
-        let imageURL = NSURL(string: restaurantData["restaurants"][indexPath.row]["img"].stringValue)!
-        cell.restaurantImageView?.af_setImageWithURL(imageURL)
+        cell.restaurantImageView?.image = UIImage(named: restaurantData["restaurants"][indexPath.row]["restaurant_name"].stringValue)
         cell.restaurantImageView.layer.cornerRadius = 5;
         cell.restaurantImageView.clipsToBounds = true;
         
