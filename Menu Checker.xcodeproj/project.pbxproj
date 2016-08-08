@@ -13,6 +13,7 @@
 		8130DBB01D340B7300B56260 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130DBAE1D340B7300B56260 /* Main.storyboard */; };
 		8130DBB21D340B7300B56260 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8130DBB11D340B7300B56260 /* Assets.xcassets */; };
 		8130DBB51D340B7300B56260 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8130DBB31D340B7300B56260 /* LaunchScreen.storyboard */; };
+		81ADAC7A1D542FA200327077 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ADAC791D542FA200327077 /* AboutViewController.swift */; };
 		81C7F7A21D35E99A00973B2B /* MenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A11D35E99A00973B2B /* MenuItemViewController.swift */; };
 		81C7F7A41D35F58200973B2B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A31D35F58200973B2B /* MenuTableViewCell.swift */; };
 		81C7F7A61D35F78800973B2B /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */; };
@@ -34,6 +35,7 @@
 		8130DBB11D340B7300B56260 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8130DBB41D340B7300B56260 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8130DBB61D340B7300B56260 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		81ADAC791D542FA200327077 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		81C7F7A11D35E99A00973B2B /* MenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemViewController.swift; sourceTree = "<group>"; };
 		81C7F7A31D35F58200973B2B /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				81C7F7A51D35F78800973B2B /* MenuTableViewController.swift */,
 				81D2A07B1D3D420A00B7441C /* SettingsTableViewController.swift */,
 				81D97DD11D49800E003908DC /* RestaurantCollectionViewController.swift */,
+				81ADAC791D542FA200327077 /* AboutViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				TargetAttributes = {
 					8130DBA41D340B7300B56260 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = SGZ32NWR4Z;
 					};
 				};
 			};
@@ -241,7 +245,7 @@
 		};
 		8182321B1D380A04002AFD44 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -297,6 +301,7 @@
 				81D97DD21D49800E003908DC /* RestaurantCollectionViewController.swift in Sources */,
 				81D2A07C1D3D420A00B7441C /* SettingsTableViewController.swift in Sources */,
 				81C7F7AA1D35F7BE00973B2B /* RestaurantCollectionViewCell.swift in Sources */,
+				81ADAC7A1D542FA200327077 /* AboutViewController.swift in Sources */,
 				8130DBA91D340B7300B56260 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +368,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "751c56c4-cf0e-4d15-a4dc-b4fe54cb5e88";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -401,6 +407,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "751c56c4-cf0e-4d15-a4dc-b4fe54cb5e88";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -411,10 +418,12 @@
 			baseConfigurationReference = 38FF0254FA3C9CCEDD69CFB2 /* Pods-Menu Checker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Menu Checker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luhagel.Menu-Checker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luhagel.menufilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "751c56c4-cf0e-4d15-a4dc-b4fe54cb5e88";
 			};
 			name = Debug;
 		};
@@ -423,10 +432,12 @@
 			baseConfigurationReference = 5582611488B19295C0CA678D /* Pods-Menu Checker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Menu Checker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.luhagel.Menu-Checker";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luhagel.menufilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "751c56c4-cf0e-4d15-a4dc-b4fe54cb5e88";
 			};
 			name = Release;
 		};

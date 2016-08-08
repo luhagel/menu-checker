@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-import AlamofireImage
 import FontAwesome_swift
 
 private let reuseIdentifier = "Cell"
@@ -67,18 +66,12 @@ class RestaurantCollectionViewController: UICollectionViewController {
         cell.sendSubviewToBack(effectView)
         
         // Configure the cell
-        let imageURL = NSURL(string: restaurantData["restaurants"][indexPath.row]["img"].stringValue)!
-        cell.restaurantImageView?.af_setImageWithURL(imageURL)
-        cell.restaurantImageView.layer.cornerRadius = 5;
-        cell.restaurantImageView.clipsToBounds = true;
-        
         let restaurantName = restaurantData["restaurants"][indexPath.row]["restaurant_name"].stringValue
         cell.restaurantNameLabel?.text = restaurantName
-//        if imageURL.absoluteString == "" {
-//            print("center")
-//            let newTopConstraint = NSLayoutConstraint(item: cell.restaurantNameLabel, attribute: .CenterX, relatedBy: .Equal, toItem: cell.contentView, attribute: .CenterX, multiplier: 1, constant: 1)
-//            cell.restaurantNameLabel.addConstraint(newTopConstraint)
-//        }
+        
+        cell.restaurantImageView?.image = UIImage(named: restaurantName)
+        cell.restaurantImageView.layer.cornerRadius = 5;
+        cell.restaurantImageView.clipsToBounds = true;
         
         return cell
     }

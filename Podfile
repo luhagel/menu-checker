@@ -10,7 +10,7 @@ target 'Menu Checker' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'Fabric'
-  pod 'Answers'
+  pod 'Crashlytics'
   pod 'CellAnimator'
   pod 'FontAwesome.swift'
 end

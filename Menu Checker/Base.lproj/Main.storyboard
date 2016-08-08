@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Settings-->
         <scene sceneID="Mde-Ph-Eca">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="z61-V5-5Kz" customClass="SettingsTableViewController" customModule="Menu_Checker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="z61-V5-5Kz" userLabel="Settings" customClass="SettingsTableViewController" customModule="Menu_Checker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CAl-nl-4eN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -64,9 +64,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="hkw-dW-bc2">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pob-d8-2Xv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="hkw-dW-bc2"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="settingsTableView" destination="CAl-nl-4eN" id="a02-an-m8d"/>
@@ -142,7 +140,11 @@
                                 <segue destination="z61-V5-5Kz" kind="show" id="KFK-n7-OeL"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Info" id="3yu-Tb-0rY"/>
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="3yu-Tb-0rY">
+                            <connections>
+                                <segue destination="kz2-rn-MKv" kind="show" id="Cj3-T4-Mz3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="restaurantCollectionView" destination="v2t-t4-yCi" id="8hb-RC-JgD"/>
@@ -152,6 +154,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R67-L0-7e2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3174" y="-495"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7CB-EB-GOy">
+            <objects>
+                <viewController id="kz2-rn-MKv" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DSa-pq-h3U"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jhr-d3-NXb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DRk-9u-Ucg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="413-T0-k1v">
+                                <rect key="frame" x="20" y="94" width="560" height="486"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">I can not guarantee that the information displayed is 100% correct, so please use common sense and ask at the store if something seems suspicius or you aren't sure.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="413-T0-k1v" firstAttribute="top" secondItem="DSa-pq-h3U" secondAttribute="bottom" constant="30" id="5qA-le-uNr"/>
+                            <constraint firstItem="Jhr-d3-NXb" firstAttribute="top" secondItem="413-T0-k1v" secondAttribute="bottom" constant="20" id="FPv-8V-lCr"/>
+                            <constraint firstItem="413-T0-k1v" firstAttribute="leading" secondItem="DRk-9u-Ucg" secondAttribute="leadingMargin" id="GBw-r7-V3P"/>
+                            <constraint firstItem="413-T0-k1v" firstAttribute="trailing" secondItem="DRk-9u-Ucg" secondAttribute="trailingMargin" id="GQZ-qt-haD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SK-rE-Akn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3174" y="343"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="Aab-L5-aTG">

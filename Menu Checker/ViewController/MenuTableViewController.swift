@@ -74,7 +74,7 @@ class MenuTableViewController: UITableViewController {
             self.listToDisplay = self.filteredMenu
         }
 
-        let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue.trunc(22, trailing: "...")
+        let productName = listToDisplay[indexPath.section]["products"][indexPath.row]["display_name"].stringValue.trunc(18, trailing: "...")
         cell.productNameLabel.text = productName
         cell.productNameLabel.sizeToFit()
         if cell.contentView.subviews.filter({$0 is UIImageView}).count < 1 {
