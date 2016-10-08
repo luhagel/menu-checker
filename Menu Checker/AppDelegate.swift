@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         Fabric.with([Answers.self, Crashlytics.self])
         let defaults = UserDefaults.standard
         if defaults.array(forKey: "UserPrefs") == nil {
