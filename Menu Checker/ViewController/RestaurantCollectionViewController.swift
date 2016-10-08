@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-import FontAwesome_swift
 
 private let reuseIdentifier = "Cell"
 
@@ -22,24 +21,22 @@ class RestaurantCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         // Register cell classes
-        self.collectionView!.registerClass(RestaurantCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(RestaurantCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
         title = "Restaurants"
-        let attributes = [NSFontAttributeName: UIFont.fontAwesomeOfSize(20)] as Dictionary!
-        settingsButton.setTitleTextAttributes(attributes, forState: .Normal)
-        settingsButton.title = String.fontAwesomeIconWithName(.Cog)
+        settingsButton.title = "Settings"
         restaurantData = JSONHelper.pullData()
 
     }
 
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowMenu" {
-            let destination = segue.destinationViewController as! MenuTableViewController
+            let destination = segue.destination as! MenuTableViewController
             let cell = sender as! RestaurantCollectionViewCell
-            if let indexPath = restaurantCollectionView.indexPathForCell(cell) {
+            if let indexPath = restaurantCollectionView.indexPath(for: cell) {
                 destination.restaurant = restaurantData["restaurants"][indexPath.row]
             }
         }
@@ -47,23 +44,23 @@ class RestaurantCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 
 
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restaurantData["restaurants"].arrayValue.count
     }
 
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = restaurantCollectionView.dequeueReusableCellWithReuseIdentifier("RestaurantCell", forIndexPath: indexPath) as! RestaurantCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = restaurantCollectionView.dequeueReusableCell(withReuseIdentifier: "RestaurantCell", for: indexPath) as! RestaurantCollectionViewCell
         
-        let blur = UIBlurEffect(style: .Dark)
+        let blur = UIBlurEffect(style: .dark)
         let effectView = UIVisualEffectView(effect: blur)
         effectView.frame = self.view.frame
         cell.addSubview(effectView)
-        cell.sendSubviewToBack(effectView)
+        cell.sendSubview(toBack: effectView)
         
         // Configure the cell
         cell.restaurantImageView?.image = UIImage(named: restaurantData["restaurants"][indexPath.row]["restaurant_name"].stringValue)

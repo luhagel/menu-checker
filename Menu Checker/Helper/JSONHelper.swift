@@ -11,8 +11,8 @@ import SwiftyJSON
 
 class JSONHelper {
     static func pullData() -> JSON { //TODO: Pull only selcted restaurant, pull from server
-        let path = NSBundle.mainBundle().pathForResource("data", ofType: "json")
-        let jsonData = NSData(contentsOfFile:path!)
+        let path = Bundle.main.path(forResource: "data", ofType: "json")
+        let jsonData = try? Data(contentsOf: URL(fileURLWithPath: path!))
         let json = JSON(data: jsonData!)
         
         return json

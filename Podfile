@@ -9,6 +9,5 @@ target 'Menu Checker' do
   pod 'SwiftyJSON'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'CellAnimator'
-  pod 'FontAwesome.swift'
+
 end

@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-import CellAnimator
 
 class MenuTableViewController: UITableViewController {
     @IBOutlet var menuTableView: UITableView!
@@ -17,14 +16,14 @@ class MenuTableViewController: UITableViewController {
     var restaurant: JSON?       = []
     var filteredMenu: [JSON]    = []
     var listToDisplay: [JSON]   = []
-    var defaults: NSUserDefaults!
+    var defaults: UserDefaults!
     var userPrefs: [String]!
     var menu: JSON!
     
-    @IBAction func filterButtonTapped(sender: UIBarButtonItem) {
+    @IBAction func filterButtonTapped(_ sender: UIBarButtonItem) {
         if userPrefs.count < 1 {
-            performSegueWithIdentifier("ShowSettings", sender: self)
-            userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
+            performSegue(withIdentifier: "ShowSettings", sender: self)
+            userPrefs = defaults.object(forKey: "UserPrefs") as? [String] ?? [String]()
             filterButton.title = "Filter (\(userPrefs.count))"
         } else {
             self.filterMenu()
@@ -35,8 +34,8 @@ class MenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defaults = NSUserDefaults.standardUserDefaults()
-        userPrefs = defaults.objectForKey("UserPrefs") as? [String] ?? [String]()
+        defaults = UserDefaults.standard
+        userPrefs = defaults.object(forKey: "UserPrefs") as? [String] ?? [String]()
         menu = restaurant!["menu"]
         
         title = "Menu"
@@ -45,17 +44,17 @@ class MenuTableViewController: UITableViewController {
         let backgroundImage = UIImage(named: "splashscreen")
         let backgroundView = UIImageView(image: backgroundImage)
         self.menuTableView.backgroundView = backgroundView
-        self.menuTableView.backgroundView?.contentMode = .ScaleAspectFill
+        self.menuTableView.backgroundView?.contentMode = .scaleAspectFill
         
-        self.menuTableView.tableFooterView = UIView(frame: CGRectZero)
+        self.menuTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return self.menu.arrayValue.count
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if filteredMenu.count == 0 {
             return self.menu[section]["products"].arrayValue.count
         } else {
@@ -63,10 +62,8 @@ class MenuTableViewController: UITableViewController {
         }
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuTableViewCell
-        
-        CellAnimator.animateCell(cell, withTransform: CellAnimator.TransformTipIn, andDuration: 0.5)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MenuCell", for: indexPath) as! MenuTableViewCell
         
         if filteredMenu.count == 0 {
             self.listToDisplay = self.menu.arrayValue
@@ -83,7 +80,7 @@ class MenuTableViewController: UITableViewController {
             for allergen in allergensArray {
                 let allergenIcon = UIImageView(image: UIImage(named: allergen.stringValue))
                 allergenIcon.frame = CGRect(x: newIconXPos, y: 10, width: 25, height: 25)
-                allergenIcon.backgroundColor = UIColor.whiteColor()
+                allergenIcon.backgroundColor = UIColor.white
                 allergenIcon.layer.cornerRadius = 3
                 allergenIcon.layer.masksToBounds = true
                 cell.contentView.addSubview(allergenIcon)
@@ -93,25 +90,25 @@ class MenuTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return self.menu[section]["category_name"].stringValue
     }
     
-    override func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         let title = UILabel()
-        title.textColor = UIColor.whiteColor()
+        title.textColor = UIColor.white
         
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = title.font
         header.textLabel?.textColor = title.textColor
-        header.tintColor = UIColor.orangeColor()
+        header.tintColor = UIColor.orange
     }
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowProduct" {
-            let destination = segue.destinationViewController as! MenuItemViewController
+            let destination = segue.destination as! MenuItemViewController
             if let indexPath = menuTableView.indexPathForSelectedRow {
                 destination.productInfo = self.listToDisplay[indexPath.section]["products"][indexPath.row]
             }
@@ -134,12 +131,12 @@ class MenuTableViewController: UITableViewController {
         
         jsonString = "{\"menu\":[\(categoriesJsonString)]}"
         
-        let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let data = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false)
         let jsonObject = JSON(data: data!)
         filteredMenu = jsonObject["menu"].arrayValue
     }
     
-    func isAllergic(allergens: [JSON], userPrefs: [String]) -> Bool {
+    func isAllergic(_ allergens: [JSON], userPrefs: [String]) -> Bool {
         for allergen in allergens {
             for pref in userPrefs {
                 if pref == allergen.stringValue {
@@ -152,9 +149,9 @@ class MenuTableViewController: UITableViewController {
 }
 
 extension String {
-    func trunc(length: Int, trailing: String? = "...") -> String {
+    func trunc(_ length: Int, trailing: String? = "...") -> String {
         if self.characters.count > length {
-            return self.substringToIndex(self.startIndex.advancedBy(length)) + (trailing ?? "")
+            return self.substring(to: self.characters.index(self.startIndex, offsetBy: length)) + (trailing ?? "")
         } else {
             return self
         }

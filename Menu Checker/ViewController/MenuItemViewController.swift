@@ -22,18 +22,18 @@ class MenuItemViewController: UIViewController {
         
         title = productInfo!["display_name"].stringValue
         
-        let blur = UIBlurEffect(style: .Dark)
+        let blur = UIBlurEffect(style: .dark)
         let effectView = UIVisualEffectView(effect: blur)
         effectView.frame = bgView.bounds
-        effectView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        effectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.bgView.addSubview(effectView)
         self.bgView.layer.cornerRadius = 10
         self.bgView.layer.masksToBounds = true
-        self.view.sendSubviewToBack(bgImageView)
+        self.view.sendSubview(toBack: bgImageView)
         
         let allergensJSONArray = productInfo!["allergens"].arrayValue
         let allergensArray:[String] = allergensJSONArray.map { $0.string!}
-        allergensLabel.text = allergensArray.joinWithSeparator(", ")
+        allergensLabel.text = allergensArray.joined(separator: ", ")
         
         ingredientsTextView.text = productInfo!["ingredients"].stringValue
     }

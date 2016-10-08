@@ -9,8 +9,8 @@
 import UIKit
 
 protocol SettingTableViewCellDelegate {
-    func toggleOn(sender: SettingTableViewCell)
-    func toggleOff(sender: SettingTableViewCell)
+    func toggleOn(_ sender: SettingTableViewCell)
+    func toggleOff(_ sender: SettingTableViewCell)
 }
 
 class SettingTableViewCell: UITableViewCell {
@@ -20,8 +20,8 @@ class SettingTableViewCell: UITableViewCell {
     @IBOutlet weak var settingSwitch: UISwitch!
     @IBOutlet weak var iconImageView: UIImageView!
     
-    @IBAction func settingSwitched(sender: AnyObject) {
-        if self.settingSwitch.on {
+    @IBAction func settingSwitched(_ sender: AnyObject) {
+        if self.settingSwitch.isOn {
             delegate?.toggleOn(self)
         } else {
             delegate?.toggleOff(self)
