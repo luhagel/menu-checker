@@ -48,6 +48,10 @@ class MenuTableViewController: UITableViewController {
         
         self.menuTableView.tableFooterView = UIView(frame: CGRect.zero)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        userPrefs = defaults.object(forKey: "UserPrefs") as? [String] ?? [String]()
+    }
 
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
